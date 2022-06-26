@@ -10,7 +10,7 @@ const calculationConfig = {
 
 const weatherConfig = {
     method: 'get',
-    url: `https://api.openweathermap.org/data/2.5/weather?q=dallas&appid=3e48a16bb7b16131bd36fe56852b49a8&units=metric`
+    url: `https://api.openweathermap.org/data/2.5/weather?q=dallas&appid={weatherAPI}&units=metric`
 }
 // const {CONNECTION_STRING} = process.env
 
