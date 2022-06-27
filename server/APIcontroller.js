@@ -56,15 +56,21 @@ const calculationConfig = {
     url: `https://fastrt.nilu.no/cgi-bin/olaeng/VitD_quartMEDandMED.cgi`
 }
 
-const weatherConfig = {
-    method: 'get',
-    url: `https://api.openweathermap.org/data/2.5/weather?q=dallas&appid=${weatherAPI}&units=metric`
-}
+// const weatherConfig = {
+//     method: 'get',
+//     url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAPI}&units=metric`
+// }
 
-const elevationConfig = {
+// const elevationConfig = {
+//     method: 'get',
+//     url: `https://api.open-elevation.com/api/v1/lookup?locations=${longitude},${latitude}`
+// }
+const elevationConfig = (latitude, longitude) => {
+    return {
     method: 'get',
     url: `https://api.open-elevation.com/api/v1/lookup?locations=${longitude},${latitude}`
-}
+}}
+
 // const {CONNECTION_STRING} = process.env
 
 
@@ -81,7 +87,7 @@ module.exports = {
             .catch(err => console.log('GETTING',err))
     },
     getElevation: async (req, res) => {
-        await axios(elevationConfig)
+        await axios(elevationConfig(latitude, longitude))
             .then((response) => {
                 elevationInfo
                 console.log(response.data)
@@ -102,15 +108,30 @@ module.exports = {
             .catch(err => console.log('POSTING', err))
     },
 
+    getStuff: async (req, res) => {
+        let {city, country, skinTone, coverage} = req.body
+        let elevation
+        let weather
+        
+        await axios.get('weatherapi', location)
+            .then((response) => {
+                weather = response.data
+            })
+        await axios(elevationConfig(weather.coord.lat, weather.coord.lon))
+            .then((response) => {
+                elevation = response.data
+            })
 
+        await axios.get('fancyexposure', {elevation, weather, location})
+        .then((response) => {
+            exposure = response.data
+            ///parse through expousre
+
+            let dummydata = {
+                exposureLimit: 4
+            }
+            res.send(dummydata)
+        })
     
+    }
 }
-
-
-    // addinput: (req, res) => {
-    //     let {text} = req.body
-
-    //     sequelize.query(`insert into input (text) values ('${text}');`)
-    //         .then(db(dbRes => res.status(200).send(dbRes[0])))
-    //         .catch(err => console.log('POSTING',err))
-    // }

@@ -1,5 +1,6 @@
 import React  from 'react';
 import './App.css';
+import Calculator from './components/Calculator';
 
 function App() {
   // const [query, setQuery] = useState([])
@@ -11,15 +12,8 @@ function App() {
   //   }
   // }
   return (
-    <div className='app'>
-      <div className='input-box'>
-        <input type="text" placeholder='Location'></input>
-        <input type="text" placeholder='Skin Tone'></input>
-        <input type="text" placeholder='Coverage'></input>
-      </div>
-      <div className='calculate-button'>
-        <button>How many minutes do I need to stand outside?</button>
-      </div>
+    <div>
+      <Calculator />
     </div>
   )
 }
