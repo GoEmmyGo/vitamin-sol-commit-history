@@ -6,17 +6,19 @@ const Calculator = () => {
 
   const [city, setCity] = useState('')
   const [country, setCountry] = useState('')
-  const [skinTone, setSkinTone] = useState('')
-  const [skinCoverage, setSkinCoverage] = useState('')
+  // const [skinTone, setSkinTone] = useState('')
+  // const [skinCoverage, setSkinCoverage] = useState('')
 
   const handleChange = (e) => {
     setCity(e.target.value)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    set
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   set
+
+  //   //can i set multiple states in one handle submit? How do i connect the input data to the back end?
+  // }
 
   const countryNames = countryCodes.map((country) => {
     return <option key={country.code} value={country.code}>{country.name}</option>

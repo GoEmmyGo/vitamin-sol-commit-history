@@ -1,5 +1,12 @@
 import React  from 'react';
 import './App.css';
+import Header from './components/Header';
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
+import Home from './components/Home'
+import About from './components/About'
 import Calculator from './components/Calculator';
 
 function App() {
@@ -13,7 +20,15 @@ function App() {
   // }
   return (
     <div>
-      <Calculator />
+      <Router>
+        <div>
+          <Calculator />
+          <Header />
+            <Route path='components/About.jsx' component={About} />
+            <Route path ='components/Calculator.jsx' component={Calculator} />
+            <Route path='components/Home.jsx' component={Home} />
+        </div>
+      </Router>
     </div>
   )
 }

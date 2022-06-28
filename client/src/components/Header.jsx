@@ -1,27 +1,28 @@
 import React from 'react'
 import '../App.css'
-import About from './About'
-import Literature from './Literature'
-import Calculator from './Calculator'
-import Title from './Title'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
     <div>
-        <span className='title'><Title /></span>
         <section className='header-container'>
             <section className='header-nav'>
                 <div className='about-link'>
-                    <About />
+                    <Link to="About.jsx">ABOUT</Link>
                 </div>
                 <div className='calculator-link'>
-                    <Calculator />
+                    <Link to="Calculator.jsx">CALCULATOR</Link>
                 </div>
-                <div className='literature-link'>
-                    <Literature />
+                <div className='home-link'>
+                    <Link to="Home.jsx">HOME</Link>
                 </div>
             </section>  
         </section>
     </div>
   )
 }
+
+
+// <div className='literature-link'>
+// <Link to="Literature.jsx">LITERATURE</Link>
+// </div>

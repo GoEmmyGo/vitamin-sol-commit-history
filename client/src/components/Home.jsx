@@ -1,9 +1,8 @@
 import React from 'react'
 import '../App.css'
-imp
 
 
-export default function Title() {
+export default function Home() {
   return (
     <div>
         <span>VITAMIN SOL</span>
