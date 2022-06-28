@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {countryCodes} from '../countryCodes.js'
 
+
 const Calculator = () => {
+
+  const [city, setCity] = useState('')
+  const [country, setCountry] = useState('')
+  const [skinTone, setSkinTone] = useState('')
+  const [skinCoverage, setSkinCoverage] = useState('')
+
+  const handleChange = (e) => {
+    setCity(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    set
+  }
 
   const countryNames = countryCodes.map((country) => {
     return <option key={country.code} value={country.code}>{country.name}</option>
   })
 
   console.log(countryCodes)
-  
+
   return (
     <div className='app'>
-      <div className='input-box'>
-        <input type="text" placeholder='City'></input>
-        <select type="text" placeholder='Country'>{countryNames}</select>
-        <input type="text" placeholder='Skin Tone'></input>
-        <input type="text" placeholder='Coverage'></input>
-      </div>
-      <div className='calculate-button'>
-        <button>How many minutes do I need to stand outside?</button>
-      </div>
+      <form className='input-form'>
+        <input type="text" placeholder='city' onChange={(e) => handleChange(e)}></input>
+        <select type="text" placeholder='country' onChange={(e) => setCountry(e.target.value)}>
+          <option defaultValue disabled selected>country</option>{countryNames}
+        </select>
+        <input type="text" placeholder='skin tone'></input>
+        <input type="text" placeholder='coverage'></input>
+        <button type='submit'>How many minutes do I need to stand outside?</button>
+      </form>
     </div>
   )
 }
