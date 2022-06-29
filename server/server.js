@@ -10,7 +10,7 @@ const port = process.env.PORT || 5432
 
 require('dotenv').config()
 
-const {getWeather, getMinutes, postInput} = require('./APIcontroller.js')
+const {getWeather, getMinutes, getStuff} = require('./APIcontroller.js')
 
 
 // So if we want to be able to accept json in any 
@@ -25,8 +25,7 @@ app.use(cors())
 app.get('/api', (req, res) => {
     res.json({ message: 'Hello from the server!'})
 })
-app.get('/api/getWeather', getWeather)
-// app.post('/api/postInput', postInput)
+app.post('/api/getStuff', getStuff)
 // app.get('/api/getMinutes', getMinutes)
 
 // All other GET requests not handled before will return our React app

@@ -8,13 +8,13 @@ export default function Header() {
         <section className='header-container'>
             <section className='header-nav'>
                 <div className='about-link'>
-                    <Link to="About.jsx">ABOUT</Link>
+                    <Link to="/About">ABOUT</Link>
                 </div>
                 <div className='calculator-link'>
-                    <Link to="Calculator.jsx">CALCULATOR</Link>
+                    <Link to="/Calculator">CALCULATOR</Link>
                 </div>
                 <div className='home-link'>
-                    <Link to="Home.jsx">HOME</Link>
+                    <Link to="/Home">HOME</Link>
                 </div>
             </section>  
         </section>

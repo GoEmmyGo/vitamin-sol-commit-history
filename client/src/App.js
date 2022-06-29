@@ -1,13 +1,14 @@
-import React  from 'react';
-import './App.css';
-import Header from './components/Header';
+import React  from 'react'
+import './App.css'
+import Header from './components/Header'
 import {
   BrowserRouter as Router,
   Route,
-} from "react-router-dom";
+  Routes
+} from "react-router-dom"
 import Home from './components/Home'
 import About from './components/About'
-import Calculator from './components/Calculator';
+import Calculator from './components/Calculator'
 
 function App() {
   // const [query, setQuery] = useState([])
@@ -22,11 +23,12 @@ function App() {
     <div>
       <Router>
         <div>
-          <Calculator />
           <Header />
-            <Route path='components/About.jsx' component={About} />
-            <Route path ='components/Calculator.jsx' component={Calculator} />
-            <Route path='components/Home.jsx' component={Home} />
+            <Routes>
+              <Route path='/About' element={<About />} />
+              <Route path ='/Calculator' element={ <Calculator />} />
+              <Route path='/Home' element={<Home />} />
+            </Routes>
         </div>
       </Router>
     </div>
