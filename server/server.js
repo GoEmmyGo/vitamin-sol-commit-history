@@ -10,7 +10,7 @@ const port = process.env.PORT || 5432
 
 require('dotenv').config()
 
-const {getWeather, getMinutes, getStuff} = require('./APIcontroller.js')
+const {getStuff} = require('./APIcontroller.js')
 
 
 // So if we want to be able to accept json in any 
