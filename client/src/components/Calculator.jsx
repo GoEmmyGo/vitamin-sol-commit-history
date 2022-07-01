@@ -20,17 +20,21 @@ const Calculator = () => {
     axios.post("/api/getStuff", {city, country, skinTone, skinCoverage}).then(
     (res) => {
       const newLineSplit =res.data.split('\n')
-      console.log(newLineSplit)
+      // console.log(newLineSplit)
       const timeFrames = [newLineSplit[18], newLineSplit[24]].map((str) => {
           const splitter = str.split(':')
-          return {
-              hours: +splitter[0].trim(),
-              mins: +splitter[1].trim()
-          }
-      })
 
-      console.log(timeFrames)})
-      .catch(err => console.log('POSTING', err))
+          // console.log(newLineSplit)
+          // console.log(splitter)
+          return {
+            hours: +splitter[0].trim(),
+            mins: +splitter[1].trim()
+          }
+
+        })
+      console.log(timeFrames)
+      })
+      .catch(err => console.log('POSTING CALC RESULT', err))
   }
 
   const countryNames = countryCodes.map((country) => {
@@ -38,6 +42,7 @@ const Calculator = () => {
   })
 
   console.log(countryCodes)
+
 
   return (
     <div className='app'>
