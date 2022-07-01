@@ -183,13 +183,13 @@ const calculationConfig = {
 module.exports = {
 
     getStuff: async (req, res) => {
-        let {city, country, skinTone, skinCoverage} = req.body
+        let {city, country, skinTone, skinExposure} = req.body
         let elevationData
         let weather
         let UVIndex
         let ozone
-        let lat
-        let lon
+        // let lat
+        // let lon
         let trueLat
         let trueLon
         let visibility
@@ -268,30 +268,30 @@ module.exports = {
             mday:dayGrabber,
             latitude:trueLat,
             longitude:trueLon,
-            sza_angle:60,
+            sza_angle:null,
             skin_index:skinTone,
-            exposure_timing:0,
+            exposure_timing:null,
             start_time:startTimeGenerator,
             dietary_equivalent:1000,
             // sky_condition:cloudConversion[cloud],
             // sky_condition:null,
             sky_condition:5,
-            aerosol_specification:0,
+            aerosol_specification:null,
             visibility:visibility,
             angstrom_beta:null,
             cloud_fraction:null,
-            wc_column1:400,
-            wc_column2:400,
-            wc_column3:100,
+            wc_column1:null,
+            wc_column2:null,
+            wc_column3:null,
             UVI:UVIndex,
             // UVI:0,
             // ozone_column: 100,
             ozone_column:ozone,
             altitude:elevationConversion,
             surface:1,
-            albedo:0.03,
+            albedo:null,
             type:4,
-            body_exposure:skinCoverage
+            body_exposure:skinExposure
         }
 
         console.log(calculationBody)

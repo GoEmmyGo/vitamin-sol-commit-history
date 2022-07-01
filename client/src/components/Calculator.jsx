@@ -8,7 +8,7 @@ const Calculator = () => {
   const [city, setCity] = useState('')
   const [country, setCountry] = useState('')
   const [skinTone, setSkinTone] = useState('')
-  const [skinCoverage, setSkinCoverage] = useState('')
+  const [skinExposure, setskinExposure] = useState('')
 
   const handleChange = (e) => {
     setCity(e.target.value)
@@ -17,7 +17,7 @@ const Calculator = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios.post("/api/getStuff", {city, country, skinTone, skinCoverage}).then(
+    axios.post("/api/getStuff", {city, country, skinTone, skinExposure}).then(
     (res) => {
       const newLineSplit =res.data.split('\n')
       // console.log(newLineSplit)
@@ -52,7 +52,7 @@ const Calculator = () => {
           <option defaultValue disabled selected>country</option>{countryNames}
         </select>
         <input type="text" placeholder='skin tone' onChange={(e) => setSkinTone(e.target.value)}></input>
-        <input type="text" placeholder='coverage' onChange={(e) => setSkinCoverage(e.target.value)}></input>
+        <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
         <button type='submit'>How many minutes do I need to stand outside?</button>
       </form>
     </div>
