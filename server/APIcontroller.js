@@ -1,19 +1,11 @@
 require('dotenv').config()
 const weatherKey = process.env.WEATHER_KEY;
 const UVIKey = process.env.UVI_KEY
-
-// const {WEATHER_KEY} = process.env
-// const {UVI_Key} = process.env
-
 const express = require('express')
 const axios = require('axios')
-
-// const longitude = response.data from weather api
-// const latitude = response.data from weather api
-
 const url = require('url')
 const circularJSON = require('circular-json')
-//this converts disgusting response to json and then string
+//this converts disgusting response to json and then a string
 
 const monthConversion = {
     0:0,
@@ -133,6 +125,8 @@ const cloudConversion = {
     '100': '3'  
 }
 
+const dateGenerator = new Date()
+
 const weatherConfig = (city, country) => {
     return {
     method: 'get',
@@ -140,34 +134,16 @@ const weatherConfig = (city, country) => {
 
 }}
 
-// const UVIConfig = (latitude, longitude) => {
-//     return {
-//     //     method: 'get',
-//     //     url: `https://api.openuv.io/04b11b5ac02d7453dba4e7a5e68c2b71/v1/uv`,
-//     //     params: {
-//     //         lat: 'latitude, from -90.00 to 90.00',
-//     //         lng: 'longitude, from -180.00 to 180.00'
-//     //       },
-//     //       headers: {
-//     //         'x-access-token': 'undefined',
-//     //         'X-RapidAPI-Key': UVIKey,
-//     //         'X-RapidAPI-Host': 'aershov-openuv-global-real-time-uv-index-v1.p.rapidapi.com'
-//     //       }
-//     // }
-// //     curl --location --request GET 'https://api.openuv.io/api/v1/uv?lat=30.19&lng=-95.50&dt=2018-01-24T10:50:52.283' \
-// // --header 'x-access-token: 04b11b5ac02d7453dba4e7a5e68c2b71'
-//     method: 'get',
-//     url: `https://api.openuv.io/api/v1/uv`,
-//     qs: { 
-//         lat: `${latitude}`, 
-//         log: `${longitude}`, 
-//         headers: {
-//             'content-type': 'application/json',
-//             // 'x-access-token': `${UVIKey}`
-//             'x-access-token': '04b11b5ac02d7453dba4e7a5e68c2b71'
-//         }
-//     // data: '04b11b5ac02d7453dba4e7a5e68c2b71'
-// }}}
+const UVIConfig = (trueLat, trueLon) => {
+    return {
+        method: 'get',
+        url: `https://api.openuv.io/api/v1/uv?lat=${trueLat}&lng=${trueLon}&dt=${dateGenerator}`,
+        headers: {
+            "content-type": "application/json",
+            "x-access-token": UVIKey
+            // "x-access-token": "04b11b5ac02d7453dba4e7a5e68c2b71"
+        }
+}}
 
 const elevationConfig = (latitude, longitude) => {
     return {
@@ -188,8 +164,6 @@ module.exports = {
         let weather
         let UVIndex
         let ozone
-        // let lat
-        // let lon
         let trueLat
         let trueLon
         let visibility
@@ -217,52 +191,29 @@ module.exports = {
         await axios(elevationConfig(trueLat, trueLon))
             .then((response) => {
                 elevationData = response.data.results[0].elevation
-                // elevationData = response.data.results[0].elevation
                 console.log(elevationData)
             })
             .catch(err => console.log('GETTING ELEVATION', err))
+          
+        // console.log(cloudConversion[cloud])
+        const elevationConversion = parseInt(elevationData) * 1000
+        // console.log(elevationConversion)
+        const startTimeGenerator = dateGenerator.getUTCHours()
+        // console.log(startTimeGenerator)
+        const monthGrabber = dateGenerator.getMonth()
+        // console.log(monthGrabber)
+        const dayGrabber = dateGenerator.getUTCDate()
+        // console.log(dayGrabber)
 
-            
-        // await axios(UVIConfig(lat, lon))
-        //     .then((response) => {
-        //             UVIndex = response.data
-        //             UVIndex = response.data.result.uv
-        //             ozone = response.data.result.ozone
-        //             console.log(UVIndex)
-        //             // console.log(ozone)
-        //         })
-        //         .catch(err => console.log('GETTING UV INDEX', err))
-            
-                // console.log(cloudConversion[cloud])
-                const elevationConversion = parseInt(elevationData) * 1000
-                // console.log(elevationConversion)
-                const dateGenerator = new Date()
-                // console.log(dateGenerator)
-                const startTimeGenerator = dateGenerator.getUTCHours()
-                // console.log(startTimeGenerator)
-                const monthGrabber = dateGenerator.getMonth()
-                // console.log(monthGrabber)
-                const dayGrabber = dateGenerator.getUTCDate()
-                // console.log(dayGrabber)
-
-        await axios.get(
-                `https://api.openuv.io/api/v1/uv?lat=${trueLat}&lng=${trueLon}&dt=${dateGenerator}`,
-                {
-                    headers: {
-                    "content-type": "application/json",
-                    "x-access-token": UVIKey
-                    // "x-access-token": "04b11b5ac02d7453dba4e7a5e68c2b71"
-                    }
-                }
-            )
+        await axios(UVIConfig(trueLat, trueLon))
             .then((response) => {
-                UVIndex = response.data.result.uv
-                ozone = response.data.result.ozone
+                    UVIndex = response.data.result.uv
+                    ozone = response.data.result.ozone
+                    console.log(UVIndex)
+                    console.log(ozone)
             })
-            .catch(err => console.log('GET UVINDEX', err))
-            console.log(UVIndex)
-            console.log(ozone)
-       
+            .catch(err => console.log('GETTING UV INDEX', err))
+
         const calculationBody = {
             month:monthConversion[monthGrabber],
             mday:dayGrabber,
@@ -274,7 +225,6 @@ module.exports = {
             start_time:startTimeGenerator,
             dietary_equivalent:1000,
             // sky_condition:cloudConversion[cloud],
-            // sky_condition:null,
             sky_condition:5,
             aerosol_specification:null,
             visibility:visibility,
@@ -284,8 +234,6 @@ module.exports = {
             wc_column2:null,
             wc_column3:null,
             UVI:UVIndex,
-            // UVI:0,
-            // ozone_column: 100,
             ozone_column:ozone,
             altitude:elevationConversion,
             surface:1,
@@ -315,7 +263,7 @@ module.exports = {
             // res.send(timeFrames)
             res.send(responseString)
         })
-        .catch(err => console.log('FINAL CALC', err))
+        .catch(err => console.log('GETTING FINAL CALC', err))
     
     }
 }
