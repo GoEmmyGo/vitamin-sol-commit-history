@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {countryCodes} from '../countryCodes.js'
 import axios from 'axios'
+// import Solution from './Solution.jsx'
 
 
 const Calculator = () => {
@@ -20,22 +21,32 @@ const Calculator = () => {
     axios.post("/api/getStuff", {city, country, skinTone, skinExposure}).then(
     (res) => {
       const newLineSplit =res.data.split('\n')
-      // console.log(newLineSplit)
+
       const timeFrames = [newLineSplit[18], newLineSplit[24]].map((str) => {
           const splitter = str.split(':')
 
-          // console.log(newLineSplit)
-          // console.log(splitter)
-          return {
+          const timeObject = {
             hours: +splitter[0].trim(),
             mins: +splitter[1].trim()
           }
 
+          return (
+            // hours: +splitter[0].trim(),
+            // mins: +splitter[1].trim()
+            timeObject
+          )
         })
-      console.log(timeFrames)
+      
+      const results = timeFrames[0].mins
+      const sunburn = timeFrames[1].mins
+      // console.log(timeFrames)
+      // console.log(newLineSplit)
+      console.log(results)
+      console.log(sunburn)
       })
       .catch(err => console.log('POSTING CALC RESULT', err))
   }
+
 
   const countryNames = countryCodes.map((country) => {
     return <option key={country.code} value={country.code}>{country.name}</option>
@@ -55,6 +66,7 @@ const Calculator = () => {
         <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
         <button type='submit'>How many minutes do I need to stand outside?</button>
       </form>
+      {/* <div className='solution-box' ><Solution /></div> */}
     </div>
   )
 }

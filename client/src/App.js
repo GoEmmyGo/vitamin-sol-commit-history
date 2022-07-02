@@ -9,6 +9,7 @@ import {
 import Home from './components/Home'
 import About from './components/About'
 import Calculator from './components/Calculator'
+// import Solution from './components/Solution'
 
 function App() {
   // const [query, setQuery] = useState([])
@@ -19,6 +20,12 @@ function App() {
   //     fetch(`${}`)
   //   }
   // }
+  // const [timeFrames, setTimeFrames] = useState('')
+
+  // const timeFramesDisplay = () => {
+  //   setTimeFrames()
+  // }
+
   return (
     <div>
       <Router>
