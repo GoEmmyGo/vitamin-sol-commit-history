@@ -15,7 +15,7 @@ const About = () => {
             <br></br>
             All it takes to get those levels up is some time in the sun. That's it. Just walk outside and recharge that Vitamin D count. Will it be a miracle cure? No such thing, BUT, it can absolutely lift your spirits, pull you out of that slump a little, hit that reset button real quick.
             <br></br>
-            We exist solely to calculate for you how long you need in the sun to top off your Vitamin D and hopefully give you that extra little boost that your cold brew coffee couldn't. All you have to do is tell us where you are, what you look like, and what you're wearing (hehehehe) and we'll tell you how many minutes to go stand outside and soak up those rays. We can even show you how to do the calculation if you want to do it yourself!
+            We exist solely to calculate for you how long you need in the sun to top off your Vitamin D and hopefully give you that extra little boost that your cold brew coffee couldn't. All you have to do is tell us where you are, what you're wearing (hehehehe) and where you fall on the fitzpatrick scale and we'll tell you how many minutes to go stand outside and soak up those rays. We can even show you how to do the calculation if you want to do it yourself!
             <br></br>
             YOUR soul needs THE sol, my friend, go outside and get it.
         </div>

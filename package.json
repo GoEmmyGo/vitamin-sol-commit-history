@@ -20,6 +20,7 @@
     "express": "^4.18.1",
     "node": "^18.4.0",
     "nodemon": "^2.0.18",
+    "react-video-tag": "^0.0.10",
     "url": "^0.11.0"
   },
   "engines": {

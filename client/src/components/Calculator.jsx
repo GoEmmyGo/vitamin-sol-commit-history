@@ -10,6 +10,8 @@ const Calculator = () => {
   const [country, setCountry] = useState('')
   const [skinTone, setSkinTone] = useState('')
   const [skinExposure, setskinExposure] = useState('')
+  // const [results, setResults] = useState('')
+  // const [sunburn, setSunburn] = useState('')
 
   const handleChange = (e) => {
     setCity(e.target.value)
@@ -45,8 +47,16 @@ const Calculator = () => {
       console.log(sunburn)
       })
       .catch(err => console.log('POSTING CALC RESULT', err))
+
+      // setResults(e.target.value)
+      // setSunburn(e.target.value)
+      // console.log(setResults)
+      // console.log(setSunburn)
   }
 
+  // useEffect(() => {
+
+  // })
 
   const countryNames = countryCodes.map((country) => {
     return <option key={country.code} value={country.code}>{country.name}</option>
@@ -66,7 +76,9 @@ const Calculator = () => {
         <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
         <button type='submit'>How many minutes do I need to stand outside?</button>
       </form>
-      {/* <div className='solution-box' ><Solution /></div> */}
+      {/* <div className='solution-box'><Solution /></div> */}
+      {/* <div className='solution-box' >{results} MINUTES TO TOP OFF VITAMIN D</div>
+      <div className='sunburn'>{sunburn} MINUTES UNTIL SUNBURN</div> */}
     </div>
   )
 }

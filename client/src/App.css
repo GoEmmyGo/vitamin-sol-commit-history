@@ -5,12 +5,13 @@
 }
 
 body {
-    font-family: 'montseratt', sans-serif;
+    font-family: ''montseratt', sans-serif;'
 }
 
-.app {
-/* background: ; */
-}
+/* .app {
+background: 'Palm trees on a sunny day.mp4';
+} */
+
 
 main {
     min-height: 100vh;
@@ -21,4 +22,29 @@ main {
     width: 100%;
     margin: 0 0 75px;
 }
+
+/* #video-background {
+    background-size: cover;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  } */
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 

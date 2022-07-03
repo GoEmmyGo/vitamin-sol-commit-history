@@ -1,12 +1,12 @@
 // import React from 'react'
-// import { timeFrames } from 'Calculator'
+// import { timeFrames } from './Calculator'
 
 // const Solution = () => {
 
-//   const results = timeFrames[0].minutes  
-//   const sunburn = timeFrames[1].minutes
-//   console.log(results)
-//   console.log(sunburn)
+// //   const results = timeFrames[0].minutes  
+// //   const sunburn = timeFrames[1].minutes
+// //   console.log(results)
+// //   console.log(sunburn)
 
 //   return (
 //     <div className='solution'>
