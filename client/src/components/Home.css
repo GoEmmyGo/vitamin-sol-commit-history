@@ -1,6 +1,19 @@
 .home {
     display:flex;
     font-family: 'Chicle', cursive;
+    font-family: 'Bungee Shade';
+    /* font-family: 'Londrina Shadow'; */
+    /* font-family: 'Rampart One'; */
+    /* font-family: 'Sedgwick Ave Display'; */
+    /* font-family: 'UnifrakturCook', cursive; */
+    font-weight: bold 700;
     font-size: 10vw;
-    color: hotpink;
+    /* color: hotpink; */
+    color: #f5e752;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 35vh;
 }

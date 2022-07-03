@@ -1,0 +1,12 @@
+.blurb {
+    font-family: 'Oswald', sans-serif;
+    color: #f5e752;
+}
+
+.about-blurb {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10vw;
+    
+}
