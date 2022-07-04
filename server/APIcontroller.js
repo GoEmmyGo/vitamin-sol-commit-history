@@ -263,7 +263,9 @@ module.exports = {
             // res.send(timeFrames)
             res.send(responseString)
         })
-        .catch(err => console.log('GETTING FINAL CALC', err))
+        .catch(err =>{ 
+            res.status(404).send("You telling me you can't spell your city? Give it another go")
+            console.log('GETTING FINAL CALC', err)})
     
     }
 }

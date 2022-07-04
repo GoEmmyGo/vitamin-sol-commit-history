@@ -1,19 +1,25 @@
-// import React from 'react'
-// import { timeFrames } from './Calculator'
+import React from 'react'
+import './Solution.css'
 
-// const Solution = () => {
+const Solution = (props) => {
 
-// //   const results = timeFrames[0].minutes  
-// //   const sunburn = timeFrames[1].minutes
-// //   console.log(results)
-// //   console.log(sunburn)
+  const {results, sunburn} = props
+  
+//   console.log(results)
+//   console.log(sunburn)
 
-//   return (
-//     <div className='solution'>
-//       <div className='results'>{results} MINUTES TO TOP OFF VITAMIN D</div>
-//       <div className='sunburn'>{sunburn} MINUTES UNTIL SUNBURN</div>
-//     </div>
-//   )
-// }
+  return (
+    <>
+        {(results && sunburn) ? 
+            (<div className='solution'>
+                <div className='results'>{results}</div> 
+                <div className='result-message'>MINUTES TO TOP OFF VITAMIN D</div>
+                <div className='sunburn'>{sunburn}</div> 
+                <div className='sunburn-message'> MINUTES UNTIL SUNBURN</div>
+            </div>) : 
+        (null)}
+    </>
+  )
+}
 
-// export default Solution
+export default Solution

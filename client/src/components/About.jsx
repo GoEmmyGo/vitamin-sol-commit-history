@@ -21,7 +21,7 @@ const About = () => {
             YOUR soul needs THE sol, my friend, go outside and get it.
         </div>
         <div className='learn-blurb'>Want to learn more about the science behind this calculation and the researchers who built it?</div>
-        <a className='learn-link' href='https://fastrt.nilu.no/README_VitD_quartMEDandMED_v2.html'>YES PLEASE</a>
+        <a className='learn-link' rel="noreferrer" target="_blank" href='https://fastrt.nilu.no/README_VitD_quartMEDandMED_v2.html'>YES PLEASE</a>
     </div>
   )
 }

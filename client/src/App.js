@@ -40,9 +40,11 @@ function App() {
       {/* <video id="background-video" autoPlay loop muted >
         <source src="https://stream.mux.com/9D6LBbSirQyDuBm01pdLKU88Azm00qnOb6/high.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InQ5UHZucm9ZY0hQNjhYSmlRQnRHTEVVSkVSSXJ0UXhKIn0.eyJleHAiOjE2NTY4MjQxNTIsImF1ZCI6InYiLCJzdWIiOiI5RDZMQmJTaXJReUR1Qm0wMXBkTEtVODhBem0wMHFuT2I2In0.cjzVnXJdBvq5S7kCBNueqiH6hlcqv-DRCi8q65-t45xueKwkm7G4er-TNgzn80lTWTt5xXTAeiFPK2FJUF20ZAzMDuCQqi9hiOnLtU0ASUoxRUVaBCveu451IvrCnvIEkSVewMGjnfPgQvXi62X9QA8CFQF-poioyxYb5VEFxwyKrT8JLx0j3Xa7wuPCeVNLa0c13jF94ZYPFMnG-PpQu9J7nWEpmMHR4kieRp7PQfyJDIHQ4v-Eg9JO8IP74lUSDKzyHYIE3V_cZJml7V29GoTko_RYeWZ2y-B01VQnMxmilhEQAWsaTgYZjL20PAZn3kBqGaEIsN96xJQ7VMsuTQ" type="video/mp4" playbackRate='0.5' />
       </video> */}
-      <video id="background-video" autoPlay loop muted >
-        <source src="https://stream.mux.com/9WJ3YFNea71i1vCWhAt1XwOg6cStPoWC/high.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InQ5UHZucm9ZY0hQNjhYSmlRQnRHTEVVSkVSSXJ0UXhKIn0.eyJleHAiOjE2NTY4MzEzNjgsImF1ZCI6InYiLCJzdWIiOiI5V0ozWUZOZWE3MWkxdkNXaEF0MVh3T2c2Y1N0UG9XQyJ9.IQBcQ5qBUJpbA-Q2A8sEsKtFpmBpIr86E1-DlmjL4DGkY5eM8KUliD8Z9VFpK9oAhwTUP2X9pZXD_WmbPkQDsJthuObikYp-Cw2HMOcVzeIity57Bb0Av-R4-plSxhz6qQsscMD1cT8-2TeuFsFaeNFD3QveNktu8XV_vKOGBYcVEytjUbtpk5VpovDf2-v4w-okUJt7jwGFiwz0rHbCsOjY3R8_XAcETOolnLp3NeoTLCfxknvynPnZONHQLzgVor7Qj_cgDeUOjANtGeBO02mfXHQ42SxmI0-JzEYgvgWJKUPvoevXI55p1XUlhdKsrpI4sQbtuoXbZoHapl4gWQ" type="video/mp4" playbackRate='0.5' />
-      </video>
+      {/* <video id="background-video" autoPlay loop muted >
+        <source src="https://github.com/GoEmmyGo/vitamin-sol/blob/main/client/build/Videos/Group%20of%20friends%20rollerskating.mp4" type="video/mp4" 
+        playbackrate='0.5' 
+        />
+      </video> */}
       <Router>
         <div>
           <Header />
