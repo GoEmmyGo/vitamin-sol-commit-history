@@ -7,16 +7,19 @@
 }
 
 
-.loading-text {
+/* text {
     font-family: 'Press Start 2P', cursive, white;
-    /* display:absolute; */
+
     align-content: center;
     align-self: center;
     align-items: center;
-    /* width: 100vw;
-    height: 100vh; */
+
     z-index: 10;
     transform: translate(30vw, 50vh);
+} */
+
+.loading-text {
+    color: white;
 }
 
 .blob {
