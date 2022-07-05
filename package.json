@@ -18,6 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
     "node": "^18.4.0",
     "nodemon": "^2.0.18",
     "react-video-tag": "^0.0.10",

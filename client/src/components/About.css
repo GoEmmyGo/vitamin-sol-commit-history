@@ -1,9 +1,22 @@
 .blurb {
     /* font-family: 'Oswald', sans-serif; */
-    font-family: 'UnifrakturCook';
-    font-style: cursive;
-    font-weight: 700;
-    color: hotpink;
+    font-family: 'Playfair Display', serif;
+    color: violet;
+    margin: 5vw;
+    background-image: url('../../public/images/blob-1951x982.png');
+    display: flex;
+
+    /* background-size: 100%;
+    margin-right: 20vw;
+    background-repeat: no-repeat;
+    background-position: left; */
+    z-index: 5;
+}
+
+.about-title {
+    display: flex;
+    z-index:10;
+    font-family: 'Bungee Shade';
 }
 
 .about-blurb {
@@ -11,10 +24,10 @@
     align-content: center;
     justify-content:center;
     align-items: center;
-    margin: 10vw;
+    padding: 10vw;
     font-size:larger;
-    background-image: url('../../public/images/blob-1951x982.png');
-    background-size: 500px;
-    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    shape-margin: circle;
+
     
 }

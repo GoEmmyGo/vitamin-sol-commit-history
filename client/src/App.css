@@ -1,26 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+}
+
 * {
-    color:#f5e752;
+    text-decoration: none;  
+}
+
+.header {
     text-decoration: none;
 }
 
-
-
-/* .input {
-    width: 100%;
-    margin: 0 0 75px;
-} */
-
-
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+.header:link, .header:visited {
+    text-decoration: none;
 }
 
+.about-link, .home-link, .calculator-link {
+    text-decoration: none;
+}
 
+.about-link:visited, .home-link:visited, .calculator-link:visited {
+    text-decoration: none;
+}
+
+.about-link:link, .home-link:link, .calculator-link:link {
+    text-decoration: none;
+}

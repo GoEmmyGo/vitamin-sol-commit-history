@@ -3,25 +3,50 @@ import './Header.css'
 // import '../App.css'
 import { Link } from 'react-router-dom'
 
+// import styled from 'styled-components'
+
+// const header = styled.header` 
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: row;
+//     align-content: space-between;
+//     align-items: center;
+//     flex-wrap: nowrap;
+//     margin-top: 10vh;
+
+
+// .header-nav {
+//     font-family: 'Pirata One', cursive;
+//     text-decoration: none;
+//     color: #f5e752;
+//     font-size: xx-large;
+//     display: flex;
+//     justify-content: space-between;
+//     padding-inline: 8vw;
+//     width: 80vw;
+// }
+
+// .header:link, .header:visited {
+//     /* color: inherit;
+//     text-decoration: inherit; */
+//     text-decoration: none;
+//     color: #f5e752;
+// }`
+
 export default function Header() {
   return (
-    <div className='header'>
-        {/* <section className='header-container'> */}
+        <div className='header'>
             <div className='header-nav'>
-                <div className='about-link'>
-                    <Link to="/About">ABOUT</Link>
-                </div>
-                <div className='calculator-link'>
-                    <Link to="/Calculator">CALCULATOR</Link>
-                </div>
-                <div className='home-link'>
-                    <Link to="/Home">HOME</Link>
-                </div>
+                <Link className='about-link' to="/About">ABOUT</Link>
+                <Link className='calculator-link' to="/Calculator">CALCULATOR</Link>
+                <Link className='home-link' to="/Home">HOME</Link>
             </div>  
-        {/* </section> */}
-    </div>
+        </div>
   )
 }
+
+
+
 
 
 // <div className='literature-link'>

@@ -1,6 +1,4 @@
 import React  from 'react'
-import './App.css'
-import Header from './components/Header'
 import {
   BrowserRouter as Router,
   Route,
@@ -10,6 +8,7 @@ import {
 import Home from './components/Home'
 import About from './components/About'
 import Calculator from './components/Calculator'
+import Header from './components/Header'
 // import './components/Home.css'
 // import { VideoTag } from 'react-video-tag'
 // import Solution from './components/Solution'

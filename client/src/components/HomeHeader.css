@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 100vh;
+}
+
+.header-nav {
+    font-family: 'Pirata One', cursive;
+    text-decoration: none;
+    color: #f5e752;
+    /* font-size: 4vw; */
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8vw;
+    width: 80vw;
+}
+
+.header:link, .header:visited {
+    /* color: inherit;
+    text-decoration: inherit; */
+    text-decoration: none;
+    color: #f5e752;
+}
+
+

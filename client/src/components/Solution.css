@@ -6,3 +6,32 @@
 .result-message {
     font-family: 'Playfair Display', serif; 
 }
+
+
+
+
+
+
+/* App.css code
+
+* {
+    color:#f5e752;
+    text-decoration: none;
+}
+
+.input {
+    width: 100%;
+    margin: 0 0 75px;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+} */
