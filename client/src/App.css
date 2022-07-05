@@ -1,62 +1,14 @@
 * {
-    margin: 1;
-    padding: 1;
-    box-sizing: border-box;
-    /* font-family: 'montseratt', sans-serif; */
+    color:#f5e752;
+    text-decoration: none;
 }
 
-/* html {
-    max-width: 100%;
-    max-height: 100%;
-    background-image: url('../public/images/decoy.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-
-/* body {
-    -webkit-animation-delay: 0.1s;
-    -webkit-animation-name: fontfix;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-   }
-   
-@-webkit-keyframes fontfix {
-from { opacity: 1; }
-to   { opacity: 1; }
-} */
-
-/* body {
-    font-family: 'montseratt', sans-serif;
-} */
-
-/* .app {
-background: 'Palm trees on a sunny day.mp4';
-} */
 
 
-main {
-    min-height: 100vh;
-    padding: 25px;
-}
-
-.input {
+/* .input {
     width: 100%;
     margin: 0 0 75px;
-}
-
-/* #video-background {
-    background-size: cover;
-    width: 100vw;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  } */
+} */
 
 
 #background-video {

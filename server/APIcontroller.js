@@ -205,14 +205,14 @@ module.exports = {
         const dayGrabber = dateGenerator.getUTCDate()
         // console.log(dayGrabber)
 
-        await axios(UVIConfig(trueLat, trueLon))
-            .then((response) => {
-                    UVIndex = response.data.result.uv
-                    ozone = response.data.result.ozone
-                    console.log(UVIndex)
-                    console.log(ozone)
-            })
-            .catch(err => console.log('GETTING UV INDEX', err))
+        // await axios(UVIConfig(trueLat, trueLon))
+        //     .then((response) => {
+        //             UVIndex = response.data.result.uv
+        //             ozone = response.data.result.ozone
+        //             console.log(UVIndex)
+        //             console.log(ozone)
+        //     })
+        //     .catch(err => console.log('GETTING UV INDEX', err))
 
         const calculationBody = {
             month:monthConversion[monthGrabber],
@@ -224,17 +224,24 @@ module.exports = {
             exposure_timing:null,
             start_time:startTimeGenerator,
             dietary_equivalent:1000,
-            // sky_condition:cloudConversion[cloud],
-            sky_condition:5,
+            sky_condition:cloudConversion[cloud],
+            // sky_condition:5,
             aerosol_specification:null,
             visibility:visibility,
-            angstrom_beta:null,
-            cloud_fraction:null,
-            wc_column1:null,
-            wc_column2:null,
-            wc_column3:null,
-            UVI:UVIndex,
-            ozone_column:ozone,
+            angstrom_beta:0.11,
+            cloud_fraction:50,
+            wc_column1:400,
+            wc_column2:400,
+            wc_column3:100,
+            // angstrom_beta:null,
+            // cloud_fraction:null,
+            // wc_column1:null,
+            // wc_column2:null,
+            // wc_column3:null,
+            // UVI:UVIndex,
+            // ozone_column:ozone,
+            UVI:null,
+            ozone_column:350,
             altitude:elevationConversion,
             surface:1,
             albedo:null,
@@ -264,7 +271,7 @@ module.exports = {
             res.send(responseString)
         })
         .catch(err =>{ 
-            res.status(404).send("You telling me you can't spell your city? Give it another go")
+            res.status(404).send("You telling me you can't spell your city? Give it another go, I believe in you")
             console.log('GETTING FINAL CALC', err)})
     
     }

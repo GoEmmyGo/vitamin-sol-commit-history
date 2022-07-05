@@ -4,7 +4,8 @@ import Header from './components/Header'
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
+  // Redirect
 } from "react-router-dom"
 import Home from './components/Home'
 import About from './components/About'
@@ -49,6 +50,7 @@ function App() {
         <div>
           <Header />
             <Routes>
+              {/* <Route exact path='/'><Redirect to='/home' /></Route> */}
               <Route path='/About' element={<About />} />
               <Route path ='/Calculator' element={ <Calculator />} />
               <Route path='/Home' element={<Home />} />

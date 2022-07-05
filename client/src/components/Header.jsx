@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div>
-        <section className='header-container'>
-            <section className='header-nav'>
+    <div className='header'>
+        {/* <section className='header-container'> */}
+            <div className='header-nav'>
                 <div className='about-link'>
                     <Link to="/About">ABOUT</Link>
                 </div>
@@ -17,8 +17,8 @@ export default function Header() {
                 <div className='home-link'>
                     <Link to="/Home">HOME</Link>
                 </div>
-            </section>  
-        </section>
+            </div>  
+        {/* </section> */}
     </div>
   )
 }

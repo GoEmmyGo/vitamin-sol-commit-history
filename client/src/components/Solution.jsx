@@ -12,10 +12,10 @@ const Solution = (props) => {
     <>
         {(results && sunburn) ? 
             (<div className='solution'>
-                <div className='results'>{results}</div> 
+                <div className='result-digit'>{results}</div> 
                 <div className='result-message'>MINUTES TO TOP OFF VITAMIN D</div>
-                <div className='sunburn'>{sunburn}</div> 
-                <div className='sunburn-message'> MINUTES UNTIL SUNBURN</div>
+                <div className='result-digit'>{sunburn}</div> 
+                <div className='result-message'> MINUTES UNTIL SUNBURN</div>
             </div>) : 
         (null)}
     </>
