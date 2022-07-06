@@ -17,8 +17,9 @@ const Calculator = () => {
   const [results, setResults] = useState('')
   const [sunburn, setSunburn] = useState('')
   const [error, setError] = useState('')
-
- 
+  
+  // const fitzpatrick = [1,2,3,4,5,6]
+  
 
   const handleChange = (e) => {
     setCity(e.target.value)
@@ -86,17 +87,24 @@ const Calculator = () => {
   console.log(countryCodes)
 
   return (
-    <div>
+    <div className='wrapper'>
       <div className='header'><Header /></div>
-      <form className='input-form' onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" placeholder='city' onChange={(e) => handleChange(e)}></input>
-        <select type="text" placeholder='country' onChange={(e) => setCountry(e.target.value)}>
-          <option defaultValue disabled selected>country</option>{countryNames}
-        </select>
-        <input type="text" placeholder='fitzpatrick skin tone' onChange={(e) => setSkinTone(e.target.value)}></input>
-        <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
-        <button type='submit'>How many minutes do I need to stand outside?</button>
-      </form>
+        <form className='input-form' onSubmit={(e) => handleSubmit(e)}>
+          <input type="text" placeholder='city' onChange={(e) => handleChange(e)}></input>
+          <select type="text" placeholder='country' onChange={(e) => setCountry(e.target.value)}>
+            <option defaultValue disabled selected>country</option>{countryNames}
+          </select>
+          <input type="text" placeholder='fitzpatrick skin tone' onChange={(e) => setSkinTone(e.target.value)}></input>
+          <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
+          <button type='submit'>How many minutes do I need to stand outside?</button>
+        </form>
+        <div className="card" tabindex="0">
+          <span className="card-infoicon">
+            <i className="info"></i>
+          </span>
+            <h1 className="card-title">This is a title</h1>
+            <p className="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I remember</p>
+        </div>
       <div className='loading-blob'><Loading loading={loading} /></div>
       <div className='solution'><Solution results={results} sunburn={sunburn}/></div>
       {error ? <div>{error}</div> : null}
@@ -105,10 +113,3 @@ const Calculator = () => {
 }
 
 export default Calculator
-
-
-//next steps
-
-//event handlers to update these ---->, state values for each input (onChange -> setState, submit fires takes state values to use as body for back-end to do its thing)
-//4 states, single submit
-//loading screen/symbol, lightweight libraries for loading symbol (use a state value, set loading display to true, then false) */}

@@ -8,38 +8,7 @@ body {
     text-decoration: none;  
 }
 
-/* .header {
-    text-decoration: none;
-} */
 
-.header:link, .header:visited {
-    text-decoration: none;
-}
+  
 
-.about-link, .home-link, .calculator-link {
-    text-decoration: none;
-}
 
-.about-link:visited, .home-link:visited, .calculator-link:visited {
-    text-decoration: none;
-}
-
-.about-link:link, .home-link:link, .calculator-link:link {
-    text-decoration: none;
-}
-
-#background-video {
-    z-index: -20;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  } 
-
-.background-video-url {
-    z-index: -20;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}

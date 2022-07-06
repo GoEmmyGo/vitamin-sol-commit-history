@@ -1,41 +1,164 @@
-/* #form {
-    display: none;
-    flex-direction: row;
-    justify-content: flex-start;
-
-    box-sizing: border-box;
-    border-width: 10px;
-    border-color: black;
-    text-transform: uppercase;
-    background-color: whitesmoke;
-    height: 2000px;
-
-    width: 600px;
+.input-form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
 }
+
+.wrapper {
+    min-height:100vh; 
+    background-image: url('../../public/images/blob-4847x973.png');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow-x: visible;
+    overflow-y: visible;
+    background-position-x: right;
+    margin-right: 3vw;
+}
+
 
 input:focus {
     outline: none ! important;
     }
 
 input::placeholder {
-    color: black;
+    color: 
+    #f5e752;
     opacity: 1;
 }
 
 input[type=text] {
     font-family: 'IBM Plex Sans', sans-serif;
-    color: black;
-    background-color: whitesmoke;
+    color: #f5e752;
+    background-color: hotpink;
     font-weight: bold;
     opacity: 1;
-    padding-left: 5px;
-    padding-top: 20px;
-    text-transform: uppercase;
-    border-radius: 0.3em;
-    border-width: 0.2em;
-    border-color: black;
-    margin-top: 18px;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    border-radius: 5em;
+    border-width: 0.3em;
+    border-color: hotpink;
+    margin-top: 3vh;
     height: fit-content;
-    font-size: 20px;
+    width: 15vw;
+    font-size: large;
+    border-style: solid;
+    margin-right: 10vw;
+}
+
+
+select:focus {
+    outline: none ! important;
+    }
+
+select::placeholder {
+    color: 
+    #f5e752;
+    opacity: 1;
+}
+
+option, select {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #f5e752;
+    background-color: hotpink;
+    font-weight: bold;
+    opacity: 1;
+    padding-top: 2vh;
+    padding-left: 0.8vw;
+    border-radius: 5em;
+    border-width: 0.3em;
+    border-color: hotpink;
+    margin-top: 3vh;
+    height: fit-content;
+    width: 16.5vw;
+    font-size: large;
+    border-style: solid;
+    margin-right: 10vw;
+}
+
+
+button {
+  width:20vw;
+  height: 20vh;
+  background: url('../../public/images/sticker.png') top center no-repeat; 
+  background-size: 45%;
+  /* animation: spin 10s linear infinite;
+  animation-play-state: paused; 
+  pointer-events: none;  */
+  color: whitesmoke;
+  text-align:center;
+  padding: 6vh 6vw;
+  font-family: 'Press Start 2P', cursive, white;
+  font-size: 90%;
+  border: none;
+  margin-right: 1vw;
+  margin-top: 60vh;
+  position: absolute;
+}
+
+/* button:hover {
+  animation-play-state: running;
+}
+
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
 } */
 
+
+.card{
+    /* position:relative; */
+
+    padding:42px 32px;
+  
+    clip-path: circle(1% at 98% 1%);
+    transition: all ease-in-out .3s;
+    background-color:violet;
+}
+
+.card-infoicon{
+    position:absolute;
+    
+    top:10px;
+    right:28px;
+    
+    font-size:1.4em;
+    color:#000000;
+    transition:ease-out .3s;
+}
+.card-title{
+    margin:0;
+    
+    font-size: 3em;
+    line-height:1.8;
+}
+.card-description{
+    margin:0;
+    
+    font-size: 1.1em;
+    line-height:1.6;
+}
+
+
+.card:hover, .card:focus{
+    clip-path: circle(75%);
+    border-radius:20px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
+                0px 3px 18px rgba(0,0,0,0.08);
+    background-image: url('../../public/images/fitzpatrick-skin-types.jpg');
+    background-repeat: no-repeat;
+    box-sizing: 5vw;
+
+    outline:none;
+}
+
+.card-infoicon {
+    opacity: 0;
+}
+
+.card:focus{
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
+                0px 3px 18px rgba(0,0,0,0.08), 
+                0px 0px 0px 4px rgba(0,0,0,0.2);
+}

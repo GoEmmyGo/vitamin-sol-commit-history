@@ -38,12 +38,5 @@
     color: #f5e752;
 }
 
-#background-video {
-    z-index: -20;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-  } 
 
 

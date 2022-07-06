@@ -1,50 +1,22 @@
-.header {
+.home-header {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 100vh;
-    font-size: 4vw;
+    font-size: 3vw;
+    margin-top: 4vh;
 }
 
-.header-nav {
+.home-header-nav {
     font-family: 'Pirata One', cursive;
     text-decoration: none;
     color: #f5e752;
-    font-size: 4vw;
-    /* font-size: xx-large; */
+    font-size: 3vw;
     display: flex;
     justify-content: space-between;
     padding-inline: 8vw;
     width: 80vw;
+    flex-direction: column;
 }
-
-.home-header:link, .home-header:visited {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link, .home-link, .calculator-link {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:visited, .home-link:visited, .calculator-link:visited {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:link, .home-link:link, .calculator-link:link {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-#background-video {
-    z-index: -20;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  } 

@@ -5,16 +5,11 @@
     font-weight: bold 700;
     font-size: 10vw;
     color: #f5e752;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    /* fill: hotpink; */
-    /* color: hotpink; */
-    /* font-family: 'Londrina Shadow'; */
-    /* font-family: 'Rampart One'; */
-    /* font-family: 'Sedgwick Ave Display'; */
-    /* font-family: 'UnifrakturCook', cursive; */
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 12vh;
 }
 
 .header {
@@ -24,16 +19,15 @@
     align-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 100vh;
-    font-size: 4vw;
+    font-size: 3vw;
+    margin-top: 4vh;
 }
 
 .header-nav {
     font-family: 'Pirata One', cursive;
     text-decoration: none;
     color: #f5e752;
-    font-size: 4vw;
-    /* font-size: xx-large; */
+    font-size: 3vw;
     display: flex;
     justify-content: space-between;
     padding-inline: 8vw;
@@ -41,26 +35,6 @@
     flex-direction: column;
 }
 
-.home-header:link, .home-header:visited {
-    /* color: inherit;
-    text-decoration: inherit; */
-    text-decoration: none;
-    color: #f5e752;
-}
 
-.about-link, .home-link, .calculator-link {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:visited, .home-link:visited, .calculator-link:visited {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:link, .home-link:link, .calculator-link:link {
-    text-decoration: none;
-    color: #f5e752;
-}
 
 

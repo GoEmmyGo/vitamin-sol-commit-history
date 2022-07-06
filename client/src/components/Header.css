@@ -5,8 +5,8 @@
     align-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 10vh;
-    z-index: 20;
+    font-size: 3vw;
+    margin-top: 4vh;
 }
 
 .header-nav {
@@ -14,33 +14,11 @@
     text-decoration: none;
     color: #f5e752;
     font-size: 3vw;
-    /* font-size: xx-large; */
     display: flex;
     justify-content: space-between;
     padding-inline: 8vw;
     width: 80vw;
-}
-
-.header:link, .header:visited {
-    /* color: inherit;
-    text-decoration: inherit; */
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link, .home-link, .calculator-link {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:visited, .home-link:visited, .calculator-link:visited {
-    text-decoration: none;
-    color: #f5e752;
-}
-
-.about-link:link, .home-link:link, .calculator-link:link {
-    text-decoration: none;
-    color: #f5e752;
+    flex-direction: column;
 }
 
 
