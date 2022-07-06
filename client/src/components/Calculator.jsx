@@ -5,6 +5,7 @@ import './Calculator.css'
 import Loading from './Loading.jsx'
 import Solution from './Solution.jsx'
 import Header from './Header'
+//   
 
 
 const Calculator = () => {
@@ -94,17 +95,24 @@ const Calculator = () => {
           <select type="text" placeholder='country' onChange={(e) => setCountry(e.target.value)}>
             <option defaultValue disabled selected>country</option>{countryNames}
           </select>
-          <input type="text" placeholder='fitzpatrick skin tone' onChange={(e) => setSkinTone(e.target.value)}></input>
-          <input type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}></input>
-          <button type='submit'>How many minutes do I need to stand outside?</button>
+          <input type="text" placeholder='fitzpatrick skin tone' onChange={(e) => setSkinTone(e.target.value)}>
+          </input>
+            <div className="skin-card" tabindex="0">
+              <span className="skin-card-infoicon">?
+              </span>
+              <p className="skin-card-description"></p>
+            </div>
+          <input className='skin-exposure' type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}>
+          </input>
+            <div className="percent-card" tabindex="0">
+                <span className="percent-card-infoicon">?
+                  <i className="percent-info"></i>
+                </span>
+                <p className="percent-card-description"></p>
+              </div>
+          {/* <button type='submit'>How many minutes do I need to stand outside?</button> */}
+          <button type='submit'>GO</button>
         </form>
-        <div className="card" tabindex="0">
-          <span className="card-infoicon">
-            <i className="info"></i>
-          </span>
-            <h1 className="card-title">This is a title</h1>
-            <p className="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I remember</p>
-        </div>
       <div className='loading-blob'><Loading loading={loading} /></div>
       <div className='solution'><Solution results={results} sunburn={sunburn}/></div>
       {error ? <div>{error}</div> : null}

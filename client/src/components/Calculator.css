@@ -45,6 +45,7 @@ input[type=text] {
     font-size: large;
     border-style: solid;
     margin-right: 10vw;
+    z-index: 40;
 }
 
 
@@ -75,8 +76,8 @@ option, select {
     font-size: large;
     border-style: solid;
     margin-right: 10vw;
+    z-index: 40;
 }
-
 
 button {
   width:20vw;
@@ -88,76 +89,125 @@ button {
   pointer-events: none;  */
   color: whitesmoke;
   text-align:center;
-  padding: 6vh 6vw;
-  font-family: 'Press Start 2P', cursive, white;
+  /* font-family: 'Press Start 2P', cursive, white; */
+  font-family: 'Bungee Shade';
   font-size: 90%;
+  font-size: 400%;
   border: none;
   margin-right: 1vw;
   margin-top: 60vh;
   position: absolute;
 }
 
-/* button:hover {
-  animation-play-state: running;
+button:hover {
+  /* animation-play-state: running; */
+  transform: scale(1.3);
+  transition: all ease 500ms;
 }
 
-
+/*
 @keyframes spin {
   100% {transform: rotate(1turn); }
 } */
 
-
-.card{
-    /* position:relative; */
-
-    padding:42px 32px;
-  
-    clip-path: circle(1% at 98% 1%);
-    transition: all ease-in-out .3s;
-    background-color:violet;
+.skin-exposure {
+    margin-top: -20vh;
+    z-index: 50;
 }
 
-.card-infoicon{
+.skin-card{
+    position:relative;
+    height: 311px;
+    width: 1024px;
+    clip-path: circle(2% at 98% 9%);
+    transition: all ease-in-out .3s;
+    background-color:white;
+    z-index: 50;
+    margin-right: 27vw;
+    margin-top: -5.5vh;
+    font-family: 'Pirata One', cursive;
+}
+
+.skin-card-infoicon{
     position:absolute;
     
-    top:10px;
-    right:28px;
+    top:15px;
+    right:15px;
     
     font-size:1.4em;
     color:#000000;
     transition:ease-out .3s;
 }
-.card-title{
-    margin:0;
-    
-    font-size: 3em;
-    line-height:1.8;
-}
-.card-description{
-    margin:0;
-    
-    font-size: 1.1em;
-    line-height:1.6;
-}
 
 
-.card:hover, .card:focus{
+.skin-card:hover, .skin-card:focus{
     clip-path: circle(75%);
     border-radius:20px;
     box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
                 0px 3px 18px rgba(0,0,0,0.08);
-    background-image: url('../../public/images/fitzpatrick-skin-types.jpg');
+    background-image: url('../../public/images/Fitzpatrick-Scale-1024x311.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     box-sizing: 5vw;
 
     outline:none;
 }
 
-.card-infoicon {
-    opacity: 0;
+
+.skin-card:focus{
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
+                0px 3px 18px rgba(0,0,0,0.08), 
+                0px 0px 0px 4px rgba(0,0,0,0.2);
 }
 
-.card:focus{
+
+
+
+
+
+
+
+
+
+.percent-card{
+    position:relative;
+    height: 311px;
+    width: 1024px;
+    clip-path: circle(2% at 98% 9%);
+    transition: all ease-in-out .3s;
+    background-color:white;
+    z-index: 50;
+    margin-right: 27vw;
+    margin-top: -5.5vh;
+    font-family: 'Pirata One', cursive;
+}
+
+.percent-card-infoicon{
+    position:absolute;
+    
+    top:15px;
+    right:15px;
+    
+    font-size:1.4em;
+    color:#000000;
+    transition:ease-out .3s;
+}
+
+
+.percent-card:hover, .percent-card:focus{
+    clip-path: circle(75%);
+    border-radius:20px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
+                0px 3px 18px rgba(0,0,0,0.08);
+    background-image: url('../../public/images/Fitzpatrick-Scale-1024x311.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: 5vw;
+
+    outline:none;
+}
+
+.percent-card:focus{
     box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
                 0px 3px 18px rgba(0,0,0,0.08), 
                 0px 0px 0px 4px rgba(0,0,0,0.2);
