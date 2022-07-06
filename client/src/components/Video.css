@@ -1,0 +1,15 @@
+#background-video {
+    z-index: -20;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  } 
+
+.background-video-url {
+    z-index: -20;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

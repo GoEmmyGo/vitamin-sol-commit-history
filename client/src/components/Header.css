@@ -6,13 +6,15 @@
     align-items: center;
     flex-wrap: nowrap;
     margin-top: 10vh;
+    z-index: 20;
 }
 
 .header-nav {
     font-family: 'Pirata One', cursive;
     text-decoration: none;
     color: #f5e752;
-    font-size: xx-large;
+    font-size: 3vw;
+    /* font-size: xx-large; */
     display: flex;
     justify-content: space-between;
     padding-inline: 8vw;
@@ -40,6 +42,7 @@
     text-decoration: none;
     color: #f5e752;
 }
+
 
 
 

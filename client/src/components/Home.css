@@ -9,6 +9,7 @@
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
+
     /* fill: hotpink; */
     /* color: hotpink; */
     /* font-family: 'Londrina Shadow'; */
@@ -16,5 +17,33 @@
     /* font-family: 'Sedgwick Ave Display'; */
     /* font-family: 'UnifrakturCook', cursive; */
 }
+
+.home-header:link, .home-header:visited {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+.about-link, .return-home-link, .calculator-link {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+.about-link:visited, .return-home-link:visited, .calculator-link:visited {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+.about-link:link, .return-home-link:link, .calculator-link:link {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+#background-video {
+    z-index: -20;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+  } 
 
 

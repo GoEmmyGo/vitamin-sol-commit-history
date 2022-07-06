@@ -2,21 +2,28 @@
     /* font-family: 'Oswald', sans-serif; */
     font-family: 'Playfair Display', serif;
     color: violet;
-    margin: 5vw;
+    /* padding: 5vw; */
     background-image: url('../../public/images/blob-1951x982.png');
     display: flex;
 
-    /* background-size: 100%;
-    margin-right: 20vw;
+    /* background-size: 100%; */
+    margin-left: 5vw;
     background-repeat: no-repeat;
-    background-position: left; */
+    background-position: fixed;
     z-index: 5;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 .about-title {
     display: flex;
     z-index:10;
     font-family: 'Bungee Shade';
+    transform: rotate(-90deg);
+    flex-direction: row;
+    /* align-items: flex-start;
+    margin: none;
+    padding: none; */
 }
 
 .about-blurb {
@@ -27,7 +34,7 @@
     padding: 10vw;
     font-size:larger;
     flex-wrap: wrap;
-    shape-margin: circle;
+    border-radius: 50%;
 
     
 }

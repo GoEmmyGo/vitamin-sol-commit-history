@@ -1,24 +1,16 @@
 import React from 'react'
-import './HomeHeader.css'
+import './Header.css'
 // import '../App.css'
 import { Link } from 'react-router-dom'
 
 export default function HomeHeader() {
   return (
     <div className='header'>
-        {/* <section className='header-container'> */}
-            <div className='header-nav'>
-                <div className='about-link'>
-                    <Link to="/About">ABOUT</Link>
-                </div>
-                <div className='calculator-link'>
-                    <Link to="/Calculator">CALCULATOR</Link>
-                </div>
-                <div className='home-link'>
-                    <Link to="/Home">HOME</Link>
-                </div>
-            </div>  
-        {/* </section> */}
+        <div className='header-nav'>
+            <Link className='about-link' to="/About">ABOUT</Link>
+            <Link className='calculator-link' to="/Calculator">CALCULATOR</Link>
+            <Link className='return-home-link' to="/ReturnHome">HOME</Link>
+        </div>  
     </div>
   )
 }

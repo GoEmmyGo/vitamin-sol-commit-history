@@ -4,6 +4,7 @@ import axios from 'axios'
 import './Calculator.css'
 import Loading from './Loading.jsx'
 import Solution from './Solution.jsx'
+import Header from './Header'
 
 
 const Calculator = () => {
@@ -25,15 +26,14 @@ const Calculator = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
     //this ensures every request starts with a clean state, no previously rendered states will become artifacts
+
     setLoading(true)
     setSunburn('')
     setResults('')
     setError('')
-    // let timeFrames
-    // let timeObject
-    // let results
-    // let sunburn
+
     console.log('hit on submit')
 
     axios.post("/api/getStuff", {city, country, skinTone, skinExposure}).then(
@@ -48,11 +48,10 @@ const Calculator = () => {
             mins: +splitter[1].trim()
           }
 
-          return (
+          return (      
             // hours: +splitter[0].trim(),
             // mins: +splitter[1].trim()
             timeObject
-            // timeFrames
           )
         })
       
@@ -74,17 +73,11 @@ const Calculator = () => {
 
       })
 
-        // await setTimeout 6000
-
       // setResults(e.target.value)
       // setSunburn(e.target.value)
       // console.log(setResults)
       // console.log(setSunburn)
   }
-
-  // useEffect(() => {
-
-  // })
 
   const countryNames = countryCodes.map((country) => {
     return <option key={country.code} value={country.code}>{country.name}</option>
@@ -92,9 +85,9 @@ const Calculator = () => {
 
   console.log(countryCodes)
 
-
   return (
     <div>
+      <div className='header'><Header /></div>
       <form className='input-form' onSubmit={(e) => handleSubmit(e)}>
         <input type="text" placeholder='city' onChange={(e) => handleChange(e)}></input>
         <select type="text" placeholder='country' onChange={(e) => setCountry(e.target.value)}>
