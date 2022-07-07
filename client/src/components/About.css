@@ -57,6 +57,10 @@
     
 }
 
+.final-line {
+    font-family: 'Pirata One' cursive;
+}
+
 .learn-blurb {
     background-image: url('../../public/images/sticker.png');
     background-repeat: no-repeat;
@@ -67,7 +71,7 @@
     text-align: center;
     padding-top: 60px;
     padding-left: 45px;
-    padding-right: 350px;
+    padding-right: 360px;
     padding-bottom: 350px;
     font-size: 20px;
     font-style: italic;
@@ -90,7 +94,7 @@
     height: 100px;
     position: relative;
     left: 80px;
-    top: -10px;
+    top: -20px;
     display: flex;
     flex-direction: row;
     width: 500px;

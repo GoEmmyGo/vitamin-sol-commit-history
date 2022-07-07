@@ -20,7 +20,7 @@
     "express": "^4.18.1",
     "gh-pages": "^4.0.0",
     "node": "^18.4.0",
-    "nodemon": "^2.0.18",
+    "nodemon": "^2.0.19",
     "react-icons": "^4.4.0",
     "react-video-tag": "^0.0.10",
     "url": "^0.11.0"
