@@ -99,7 +99,7 @@ const Calculator = () => {
           </input>
           <input className='skin-exposure' type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}>
           </input>
-          <button type='submit'>GO</button>
+          <button className='go-button' type='submit'>GO</button>
           <div className="skin-card" tabindex="0">
               <span className="skin-card-infoicon">?
               </span>
