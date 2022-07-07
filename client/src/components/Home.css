@@ -43,6 +43,12 @@
 .about-link, .return-home-link, .calculator-link {
     text-decoration: none;
     color: #f5e752;
+    width:500px
+}
+
+.about-link:hover, .return-home-link:hover, .calculator-link:hover {
+    transform:translateX(40px); 
+    transition: all ease 500ms;
 }
 
 .about-link:visited, .return-home-link:visited, .calculator-link:visited {
@@ -53,6 +59,7 @@
 .about-link:link, .return-home-link:link, .calculator-link:link {
     text-decoration: none;
     color: #f5e752;
+    
 }
 
 

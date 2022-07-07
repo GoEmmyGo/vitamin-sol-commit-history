@@ -97,21 +97,21 @@ const Calculator = () => {
           </select>
           <input type="text" placeholder='fitzpatrick skin tone' onChange={(e) => setSkinTone(e.target.value)}>
           </input>
-            <div className="skin-card" tabindex="0">
+          <input className='skin-exposure' type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}>
+          </input>
+          <button type='submit'>GO</button>
+          <div className="skin-card" tabindex="0">
               <span className="skin-card-infoicon">?
               </span>
               <p className="skin-card-description"></p>
-            </div>
-          <input className='skin-exposure' type="text" placeholder='skin exposure' onChange={(e) => setskinExposure(e.target.value)}>
-          </input>
-            <div className="percent-card" tabindex="0">
-                <span className="percent-card-infoicon">?
-                  <i className="percent-info"></i>
-                </span>
-                <p className="percent-card-description"></p>
-              </div>
+          </div>
+          <div className="percent-card" tabindex="0">
+            <span className="percent-card-infoicon">?
+              <i className="percent-info"></i>
+            </span>
+            <p className="percent-card-description">&nbsp;10% &nbsp;30%&nbsp;&nbsp; 50%&nbsp; 80%&nbsp;&nbsp;100%</p>
+          </div>
           {/* <button type='submit'>How many minutes do I need to stand outside?</button> */}
-          <button type='submit'>GO</button>
         </form>
       <div className='loading-blob'><Loading loading={loading} /></div>
       <div className='solution'><Solution results={results} sunburn={sunburn}/></div>

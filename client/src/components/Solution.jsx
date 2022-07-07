@@ -9,16 +9,16 @@ const Solution = (props) => {
 //   console.log(sunburn)
 
   return (
-    <>
+    <div className='solution-blob'>
         {(results && sunburn) ? 
-            (<div className='solution'>
-                <div className='result-digit'>{results}</div> 
-                <div className='result-message'>MINUTES TO TOP OFF VITAMIN D</div>
-                <div className='result-digit'>{sunburn}</div> 
-                <div className='result-message'> MINUTES UNTIL SUNBURN</div>
+            (<div className='solution-popup animate splat'>
+                <p className='digit'>{results}</p> 
+                <p className='msg'>MINUTES TO TOP<br/>OFF VITAMIN D</p>
+                <p className='digit-2'>{sunburn}</p> 
+                <p className='msg-2'>MINUTES<br/>UNTIL SUNBURN</p> 
             </div>) : 
         (null)}
-    </>
+    </div>
   )
 }
 

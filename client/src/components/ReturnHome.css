@@ -33,6 +33,7 @@
     padding-inline: 8vw;
     width: 80vw;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 
