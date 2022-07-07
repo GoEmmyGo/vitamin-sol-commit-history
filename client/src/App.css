@@ -8,7 +8,14 @@ body {
     text-decoration: none;  
 }
 
-
+video {
+    position: fixed;
+    width: 100%;
+    z-index: -1000;
+    margin-top: none;
+    top: 0px;
+    filter: brightness(80%)
+}
   
 
 

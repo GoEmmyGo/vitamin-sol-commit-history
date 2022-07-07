@@ -8,9 +8,9 @@
   /* transform: translate(-100vw 800vh) */
   z-index: 100;
   position: relative;
-  max-width: 1300px;
-  bottom: 800px;
-
+  max-width: 1400px;
+  bottom: 1200px;
+  left:100px;
 }
 .blob path {
  animation: blob 7s linear  infinite;

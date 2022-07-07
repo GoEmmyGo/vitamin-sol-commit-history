@@ -19,7 +19,7 @@
         }
         70% {
             opacity: 1;
-            transform: scale(1.1, 1.1) rotate(0deg);
+            transform: scale(1.1, 1.1) rotate(0deg) ease;
         }
         
         85% {
@@ -29,7 +29,7 @@
         
         100% {
             opacity: 1;
-            transform: scale(1, 1) rotate(0) translate(0, 0);
+            transform: scale(1, 1) rotate(0) translate(0, 0) ease;
         }
     }
 
@@ -46,47 +46,61 @@
 
 
 .solution-popup {
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    /* font-family: 'Press Start 2P'; */
+    font-family: 'Oswald';
     color: #f5e752;
     /* color: #11bcd3; */
-    background-image: url('../../public/images/blob-2.png');
-    background-size: 900px;
+    border-radius: 50%;
+    background-color: #fc8668 ;
+    /* background-size: 90px; */
     background-repeat: no-repeat;
     position: relative;
-    height: 1000px;
-    top: -340px;
-    left: 230px; 
+    height: 600px;
+    width: 650px;
+    top: -600px;
+    left: 300px; 
     display: flex;
 }
 
 .digit {
     font-family: 'Bungee Shade';
-    padding-left: 170px;
-    padding-top: 50px;
-    font-size: 80px;
+    /* padding-left: 100px;
+    padding-top: -30px; */
+    position: relative;
+    top: -400px;
+    font-size: 250px;
+    left:120px;
 }
 
 .digit-2 {
-    /* position: relative; */
-    font-family: 'Bungee Shade';
-    right: 400px;
-    padding-top: 210px;
-    font-size: 80px; 
     position: relative;
+    /* font-family: 'Bungee Shade'; */
+    right: 180px;
+    top:40px;
+    padding-left:-40px;
+    padding-top: 130px;
+    font-size: 30px; 
 }
 
 .msg {
-    padding-left: 20px;
-    padding-top:160px;
-    font-size: xx-large;
+    font-family: 'Bungee Shade';
+    left:130px;
+    top:60px;
+    /* padding-top:150px; */
+    font-size: 80px;
+    position: relative;
+    /* font-weight: bold; */
 
 }
 
 .msg-2 {
-    right: 380px;
-    padding-top: 320px;
-    font-size: xx-large;
+    right:250px;
+    top:300px;
+    /* padding-right:100px; */
+    font-size: 25px;
     position: relative;
+    /* font-weight: bold; */
 }
 /* .result-message {
     font-family: 'Playfair Display', serif; 

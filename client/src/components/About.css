@@ -1,13 +1,14 @@
 .blurb {
     /* font-family: 'Oswald', sans-serif; */
     font-family: 'Playfair Display', serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
     color: violet;
     /* padding: 5vw; */
     background-image: url('../../public/images/blob-1951x982.png');
     display: flex;
 
     /* background-size: 100%; */
-    margin-left: 5vw;
+    margin-left: 300px;
     background-repeat: no-repeat;
     background-position: fixed;
     z-index: 5;
@@ -40,4 +41,37 @@
     background-color: hotpink;
     font-weight: bold; */
     
+}
+
+.learn-blurb {
+    background-image: url('//client/public/images/blob-3949x912.png');
+    background-color:
+    #876e6f;
+    height: 40px;
+    width: 2000px;
+    border-radius: 50%;
+    z-index: 1;
+    text-align: left;
+    padding-top: 90px;
+    padding-left: 100px;
+    padding-bottom: 350px;
+    font-size: 30px;
+    /* padding-right: 40px; */
+    /* padding: 2%; */
+    /* background-position: fixed; */
+    position: relative;
+    right: 100px;
+    bottom: 200px;
+    /* right: 100px; */
+    /* display: flex; */
+    /* flex-wrap: wrap;
+    font-size: xx-large;
+    align-content: left;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.learn-link {
+    font-family: 'Bungee Shade';
 }

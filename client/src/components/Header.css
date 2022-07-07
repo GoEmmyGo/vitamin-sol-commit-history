@@ -6,6 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     font-size: 3vw;
+    margin-top: 4vh;
 }
 
 .header-nav {
@@ -18,9 +19,10 @@
     padding-inline: 8vw;
     width: 80vw;
     flex-direction: column;
-    position: fixed;
-    margin-top: 20vh;
-    z-index: 100;
+    /* position: fixed;
+    margin-top: 25vh;
+    left:2vw;
+    z-index: 100; */
 }
 
 

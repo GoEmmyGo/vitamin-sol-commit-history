@@ -13,9 +13,9 @@ const Solution = (props) => {
         {(results && sunburn) ? 
             (<div className='solution-popup animate splat'>
                 <p className='digit'>{results}</p> 
-                <p className='msg'>MINUTES TO TOP<br/>OFF VITAMIN D</p>
-                <p className='digit-2'>{sunburn}</p> 
-                <p className='msg-2'>MINUTES<br/>UNTIL SUNBURN</p> 
+                <p className='msg'>min</p>
+                {/* <p className='digit-2'></p>  */}
+                <p className='msg-2'>{sunburn} minutes until sunburn, careful</p> 
             </div>) : 
         (null)}
     </div>

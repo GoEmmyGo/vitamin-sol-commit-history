@@ -5,14 +5,14 @@
 	justify-content: center;
 	align-items: flex-end;
     position: relative;
-    top:250px;
+    bottom:100px;
     left:400px;
     width: 500px
 }
 
 .wrapper {
     min-height: 130vh; 
-    background-image: url('../../public/images/blob-4847x973.png');
+    /* background-image: url('../../public/images/blob-4847x973.png'); */
     background-size: 50vw;
     background-repeat: no-repeat;
     background-position: fixed;
@@ -34,20 +34,21 @@ input::placeholder {
 }
 
 input[type=text] {
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    /* font-weight: bold; */
+    font-family: 'Oswald';
     color: #f5e752;
-    background-color: hotpink;
-    font-weight: bold;
+    background-color: #f76cf7;
     opacity: 1;
     padding-top: 2vh;
     padding-left: 1vw;
     border-radius: 5em;
     border-width: 0.3em;
-    border-color: hotpink;
+    border-color: #f76cf7;
     margin-top: 3vh;
     height: fit-content;
     width: 15vw;
-    font-size: large;
+    font-size: x-large;
     border-style: solid;
     margin-right: 10vw;
     z-index: 40;
@@ -65,20 +66,21 @@ select::placeholder {
 }
 
 option, select {
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    /* font-weight: bold; */
+    font-family: 'Oswald';
     color: #f5e752;
-    background-color: hotpink;
-    font-weight: bold;
+    background-color:#f76cf7;
     opacity: 1;
     padding-top: 2vh;
     padding-left: 0.8vw;
     border-radius: 5em;
     border-width: 0.3em;
-    border-color: hotpink;
+    border-color: #f76cf7;
     margin-top: 3vh;
     height: fit-content;
-    width: 16.5vw;
-    font-size: large;
+    width: 16.8vw;
+    font-size: x-large;
     border-style: solid;
     margin-right: 10vw;
     z-index: 40;
@@ -93,20 +95,20 @@ input:focus, select:focus {
 button {
   width:20vw;
   height: 20vh;
-  background: url('../../public/images/sticker.png') top center no-repeat; 
+  background: url('./../../public/images/blob-3949x912.png') top center no-repeat; 
   background-size: 45%;
   /* animation: spin 10s linear infinite;
   animation-play-state: paused; 
   pointer-events: none;  */
-  color: whitesmoke;
+  color: #11bcd3;
   text-align:center;
   /* font-family: 'Press Start 2P', cursive, white; */
   font-family: 'Bungee Shade';
   /* font-family: 'Pirata One', cursive; */
   font-size: 400%;
   border: none;
-  right:20px;
-  bottom:-10px;
+  left:10px;
+  bottom: 20px;
   position: relative;
   z-index: 51;
 }
@@ -146,7 +148,7 @@ button:hover {
     background-color:white;
     z-index: 50;
     right: 580px;
-    bottom: 330px;
+    bottom: 360px;
     font-family: 'Pirata One', cursive;
 }
 
@@ -157,7 +159,7 @@ button:hover {
     right:15px;
     
     font-size:1.4em;
-    color:#000000;
+    color:#11bcd3 ;
     transition:ease-out .3s;
 }
 
@@ -201,7 +203,7 @@ button:hover {
     background-color:white;
     z-index: 51;
     margin-right: 27.1vw;
-    margin-top: -57.5vh;
+    margin-top: -59vh;
     font-family: 'Pirata One', cursive;
 }
 
@@ -212,7 +214,7 @@ button:hover {
     right:15px;
     
     font-size:1.4em;
-    color:#000000;
+    color:#11bcd3 ;
     transition:ease-out .3s;
 }
 
