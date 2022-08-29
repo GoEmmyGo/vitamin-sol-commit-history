@@ -148,7 +148,7 @@ input:focus, select:focus {
     background-color:white;
     z-index: 50;
     right: 580px;
-    bottom: 360px;
+    bottom: 380px;
     font-family: 'Pirata One', cursive;
 }
 
@@ -202,8 +202,8 @@ input:focus, select:focus {
     transition: all ease-in-out .3s;
     background-color:white;
     z-index: 51;
-    margin-right: 27.1vw;
-    margin-top: -59vh;
+    margin-right: 27.2vw;
+    margin-top: -57vh;
     font-family: 'Pirata One', cursive;
 }
 

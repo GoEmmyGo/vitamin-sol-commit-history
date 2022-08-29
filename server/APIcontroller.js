@@ -141,7 +141,6 @@ const UVIConfig = (trueLat, trueLon) => {
         headers: {
             "content-type": "application/json",
             "x-access-token": UVIKey
-            // "x-access-token": "04b11b5ac02d7453dba4e7a5e68c2b71"
         }
 }}
 
@@ -205,14 +204,14 @@ module.exports = {
         const dayGrabber = dateGenerator.getUTCDate()
         // console.log(dayGrabber)
 
-        // await axios(UVIConfig(trueLat, trueLon))
-        //     .then((response) => {
-        //             UVIndex = response.data.result.uv
-        //             ozone = response.data.result.ozone
-        //             console.log(UVIndex)
-        //             console.log(ozone)
-        //     })
-        //     .catch(err => console.log('GETTING UV INDEX', err))
+        await axios(UVIConfig(trueLat, trueLon))
+            .then((response) => {
+                    UVIndex = response.data.result.uv
+                    ozone = response.data.result.ozone
+                    console.log(UVIndex)
+                    console.log(ozone)
+            })
+            .catch(err => console.log('GETTING UV INDEX', err))
 
         const calculationBody = {
             month:monthConversion[monthGrabber],
@@ -224,24 +223,24 @@ module.exports = {
             exposure_timing:null,
             start_time:startTimeGenerator,
             dietary_equivalent:1000,
-            sky_condition:cloudConversion[cloud],
-            // sky_condition:5,
+            // sky_condition:cloudConversion[cloud],
+            sky_condition:5,
             aerosol_specification:null,
             visibility:visibility,
-            angstrom_beta:0.11,
-            cloud_fraction:50,
-            wc_column1:400,
-            wc_column2:400,
-            wc_column3:100,
-            // angstrom_beta:null,
-            // cloud_fraction:null,
-            // wc_column1:null,
-            // wc_column2:null,
-            // wc_column3:null,
-            // UVI:UVIndex,
-            // ozone_column:ozone,
-            UVI:null,
-            ozone_column:350,
+            // angstrom_beta:0.11,
+            // cloud_fraction:50,
+            // wc_column1:400,
+            // wc_column2:400,
+            // wc_column3:100,
+            angstrom_beta:null,
+            cloud_fraction:null,
+            wc_column1:null,
+            wc_column2:null,
+            wc_column3:null,
+            UVI:UVIndex,
+            ozone_column:ozone,
+            // UVI:null,
+            // ozone_column:350,
             altitude:elevationConversion,
             surface:1,
             albedo:null,
@@ -256,18 +255,7 @@ module.exports = {
         axios.post('https://fastrt.nilu.no/cgi-bin/olaeng/VitD_quartMEDandMED.cgi', params).then((response) => {
 
             const responseString = circularJSON.stringify(response.data)
-            // console.log(responseString)
-            // const newLineSplit =responseString.split('\n')
-            // console.log(newLineSplit)
-            // const timeFrames = [newLineSplit[18], newLineSplit[24]].map((str) => {
-            //     const splitter = str.split(':')
-            //     return {
-            //         hours: +splitter[0].trim(),
-            //         mins: +splitter[1].trim()
-            //     }
-            // })
 
-            // res.send(timeFrames)
             res.send(responseString)
         })
         .catch(err =>{ 
