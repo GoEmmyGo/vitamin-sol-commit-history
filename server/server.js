@@ -7,6 +7,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const port = process.env.PORT || 5432
+const path = require('path')
 
 require('dotenv').config()
 
@@ -18,8 +19,8 @@ const {getStuff} = require('./APIcontroller.js')
 app.use(express.json())
 app.use(cors())
 
-// Have Node serve the files for our built React app
-// app.use(express.static(path.resolve(__dirname, '../client/build')))
+// Have Node serve the files for our built React app (this is so that the front end knows where to point ex. app ran locally is from files, but when deplyed is ran from build folder, needs to be told where to get remaining files that aren't in the build folder to deploy properly)
+app.use(express.static(path.resolve(__dirname, '../client/build')))
 // app.use(express.urlencoded({extended:false}))
 
 app.get('/api', (req, res) => {
