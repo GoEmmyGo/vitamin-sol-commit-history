@@ -5,7 +5,7 @@
     /* color: violet; */
     color:#fc6868;
     /* padding: 5vw; */
-    background-image: url('../../public/images/blob-1951x982.png');
+    background-image: url('../images/blob-1951x982.png');
     display: flex;
 
     background-size: 1100px;
@@ -62,7 +62,7 @@
 }
 
 .learn-blurb {
-    background-image: url('../../build/images/sticker.png');
+    background-image: url('../images/sticker.png');
     background-repeat: no-repeat;
     background-size: 300px;
     height: 100px;

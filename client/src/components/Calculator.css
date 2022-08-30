@@ -12,7 +12,7 @@
 
 .wrapper {
     min-height: 130vh; 
-    /* background-image: url('../../public/images/blob-4847x973.png'); */
+    /* background-image: url('..//images/blob-4847x973.png'); */
     background-size: 50vw;
     background-repeat: no-repeat;
     background-position: fixed;
@@ -95,7 +95,7 @@ input:focus, select:focus {
 .go-button {
   width:20vw;
   height: 20vh;
-  background: url('./../../public/images/blob-3949x912.png') top center no-repeat; 
+  background: url('./..//images/blob-3949x912.png') top center no-repeat; 
   background-size: 45%;
   /* animation: spin 10s linear infinite;
   animation-play-state: paused; 
@@ -169,7 +169,7 @@ input:focus, select:focus {
     border-radius:20px;
     box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
                 0px 3px 18px rgba(0,0,0,0.08);
-    background-image: url('../../public/images/Fitzpatrick-Scale-1024x311.jpg');
+    background-image: url('..//images/Fitzpatrick-Scale-1024x311.jpg');
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: 5vw;
@@ -231,7 +231,7 @@ input:focus, select:focus {
     border-radius:20px;
     box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
                 0px 3px 18px rgba(0,0,0,0.08);
-    background-image: url('../../public/images/Fitzpatrick-Scale-1024x311\ -\ Copy.jpg');
+    background-image: url('..//images/Fitzpatrick-Scale-1024x311\ -\ Copy.jpg');
     background-repeat: no-repeat;
     background-position: center;
     box-sizing: 5vw;
