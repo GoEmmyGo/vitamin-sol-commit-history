@@ -29,6 +29,9 @@ GET using  Weather API GET request long and lat
 POST using month, day, long, lat, ozone layer, sky condition from Weather API
 POST using elevation from Elevation API
 POST using skin tone from user input form
+POST using UV Index
 
+`UV Index API`
 
+GET UV Index using Lat and Long
 
