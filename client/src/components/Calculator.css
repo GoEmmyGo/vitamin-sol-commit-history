@@ -1,0 +1,252 @@
+.input-form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+    position: relative;
+    bottom:100px;
+    left:400px;
+    width: 500px
+}
+
+.wrapper {
+    min-height: 130vh; 
+    /* background-image: url('..//images/blob-4847x973.png'); */
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    overflow-x: visible;
+    overflow-y: visible;
+    background-position-x: right;
+    margin-right: 3vw;
+}
+
+
+input:focus {
+    outline: none ! important;
+    }
+
+input::placeholder {
+    color: 
+    #f5e752;
+    opacity: 1;
+}
+
+input[type=text] {
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    /* font-weight: bold; */
+    font-family: 'Oswald';
+    color: #f5e752;
+    background-color: #f76cf7;
+    opacity: 1;
+    padding-top: 2vh;
+    padding-left: 1vw;
+    border-radius: 5em;
+    border-width: 0.3em;
+    border-color: #f76cf7;
+    margin-top: 3vh;
+    height: fit-content;
+    width: 15vw;
+    font-size: x-large;
+    border-style: solid;
+    margin-right: 10vw;
+    z-index: 40;
+}
+
+
+select:focus {
+    outline: none ! important;
+    }
+
+select::placeholder {
+    color: 
+    #f5e752;
+    opacity: 1;
+}
+
+option, select {
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    /* font-weight: bold; */
+    font-family: 'Oswald';
+    color: #f5e752;
+    background-color:#f76cf7;
+    opacity: 1;
+    padding-top: 2vh;
+    padding-left: 0.8vw;
+    border-radius: 5em;
+    border-width: 0.3em;
+    border-color: #f76cf7;
+    margin-top: 3vh;
+    height: fit-content;
+    width: 16.8vw;
+    font-size: x-large;
+    border-style: solid;
+    margin-right: 10vw;
+    z-index: 40;
+}
+
+input:focus, select:focus {
+    border-radius: 5em;
+    border-width: 0.3em;
+    border-color: #f5e752;
+}
+
+.go-button {
+  width:20vw;
+  height: 20vh;
+  background: url('./..//images/blob-3949x912.png') top center no-repeat; 
+  background-size: 45%;
+  /* animation: spin 10s linear infinite;
+  animation-play-state: paused; 
+  pointer-events: none;  */
+  color: #11bcd3;
+  text-align:center;
+  /* font-family: 'Press Start 2P', cursive, white; */
+  font-family: 'Bungee Shade';
+  /* font-family: 'Pirata One', cursive; */
+  font-size: 400%;
+  border: none;
+  left:10px;
+  bottom: 20px;
+  position: relative;
+  z-index: 51;
+}
+
+.go-button:focus {
+    outline: none;
+    font-style: bold;
+}
+
+.go-button:active {
+    outline: none;
+    font-style: bold;
+}
+
+.go-button:hover {
+  /* animation-play-state: running; */
+  transform: scale(1.3);
+  transition: all ease 500ms;
+}
+
+/*
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+} */
+
+.skin-exposure {
+    margin-top: -20vh;
+    z-index: 50;
+}
+
+.skin-card{
+    position:relative;
+    height: 311px;
+    width: 1024px;
+    clip-path: circle(2% at 98% 9%);
+    transition: all ease-in-out .3s;
+    background-color:white;
+    z-index: 50;
+    right: 580px;
+    bottom: 380px;
+    font-family: 'Pirata One', cursive;
+}
+
+.skin-card-infoicon{
+    position:absolute;
+    
+    top:15px;
+    right:15px;
+    
+    font-size:1.4em;
+    color:#11bcd3 ;
+    transition:ease-out .3s;
+}
+
+
+.skin-card:hover, .skin-card:focus{
+    clip-path: circle(75%);
+    border-radius:20px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
+                0px 3px 18px rgba(0,0,0,0.08);
+    background-image: url('..//images/Fitzpatrick-Scale-1024x311.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: 5vw;
+    z-index: 52;
+
+    outline:none;
+}
+
+
+.skin-card:focus{
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
+                0px 3px 18px rgba(0,0,0,0.08), 
+                0px 0px 0px 4px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+.percent-card{
+    position:relative;
+    height: 311px;
+    width: 1024px;
+    clip-path: circle(2% at 98% 9%);
+    transition: all ease-in-out .3s;
+    background-color:white;
+    z-index: 51;
+    margin-right: 27.2vw;
+    margin-top: -57vh;
+    font-family: 'Pirata One', cursive;
+}
+
+.percent-card-infoicon{
+    position:absolute;
+    z-index:48;
+    top:15px;
+    right:15px;
+    
+    font-size:1.4em;
+    color:#11bcd3 ;
+    transition:ease-out .3s;
+}
+
+/* .percent-card-infoicon:focus{
+    opacity: 0;
+}
+
+.percent-card-infoicon:hover{
+    opacity: 0;
+} */
+
+.percent-card:hover, .percent-card:focus{
+    clip-path: circle(75%);
+    border-radius:20px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
+                0px 3px 18px rgba(0,0,0,0.08);
+    background-image: url('..//images/Fitzpatrick-Scale-1024x311\ -\ Copy.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: 5vw;
+    outline:none;
+    z-index: 49;
+}
+
+.percent-card-description {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8vw;
+    color:#f76cf7;
+}
+
+.percent-card:focus{
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 
+                0px 3px 18px rgba(0,0,0,0.08), 
+                0px 0px 0px 4px rgba(0,0,0,0.2);
+}

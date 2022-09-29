@@ -1,0 +1,40 @@
+.return-home {
+    display:flex;
+    font-family: 'Chicle', cursive;
+    font-family: 'Bungee Shade';
+    font-weight: bold 700;
+    font-size: 10vw;
+    color: #f5e752;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 12vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+.header-nav {
+    font-family: 'Pirata One', cursive;
+    text-decoration: none;
+    color: #f5e752;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8vw;
+    width: 80vw;
+    flex-direction: column;
+}
+
+
+
+

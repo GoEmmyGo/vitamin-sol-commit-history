@@ -1,0 +1,22 @@
+.home-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+.home-header-nav {
+    font-family: 'Pirata One', cursive;
+    text-decoration: none;
+    color: #f5e752;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8vw;
+    width: 80vw;
+    flex-direction: column;
+}

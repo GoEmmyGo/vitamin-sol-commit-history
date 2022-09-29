@@ -1,0 +1,66 @@
+.home {
+    display:flex;
+    font-family: 'Chicle', cursive;
+    font-family: 'Bungee Shade';
+    font-weight: bold 700;
+    font-size: 10vw;
+    color: #f5e752;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 12vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 3vw;
+    margin-top: 4vh;
+}
+
+.header-nav {
+    font-family: 'Pirata One', cursive;
+    text-decoration: none;
+    color: #f5e752;
+    font-size: 3vw;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8vw;
+    width: 80vw;
+    flex-direction: column;
+}
+
+.header:link, .home-header:visited {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+.about-link, .return-home-link, .calculator-link {
+    text-decoration: none;
+    color: #f5e752;
+    width:500px
+}
+
+.about-link:hover, .return-home-link:hover, .calculator-link:hover {
+    transform:translateX(40px); 
+    transition: all ease 500ms;
+}
+
+.about-link:visited, .return-home-link:visited, .calculator-link:visited {
+    text-decoration: none;
+    color: #f5e752;
+}
+
+.about-link:link, .return-home-link:link, .calculator-link:link {
+    text-decoration: none;
+    color: #f5e752;
+    
+}
+
+
+

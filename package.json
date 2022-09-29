@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "proxy": "http://localhost:5432",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "circular-json": "^0.5.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "gh-pages": "^4.0.0",
+    "node": "^18.4.0",
+    "nodemon": "^2.0.20",
+    "react-icons": "^4.4.0",
+    "react-video-tag": "^0.0.10",
+    "url": "^0.11.0"
+  },
+  "engines": {
+    "node": "v17.7.2"
+  }
+}
