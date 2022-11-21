@@ -30,7 +30,7 @@ POST using elevation from Elevation API
 POST using skin tone from user input form
 POST using UV Index
 
-
+NOTE: Old API Keys destroyed and replaced with new keys for security purposes
 
 
 
